@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content=
+    "Design technique with haskell type">
+    <link rel="alternate" type="application/rss+xml" href=
+    "https://hughjfchen.github.io/rss.xml" title=
+    "RSS feed for https://hughjfchen.github.io/">
+    <title>Separate data interface and definition when designing
+    type</title>
+    <meta name="author" content="Hugh Chen">
+    <meta name="referrer" content="no-referrer">
+    <link href="static/default.css" rel="stylesheet" type=
+    "text/css">
+    <link href="static/code.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="static/favicon.ico">
+    <meta name="viewport" content=
+    "width=device-width, initial-scale=1">
+    <meta name="generator" content="org-blog-static">
+</head>
+<body>
+    <div id="preamble" class="status">
+        <p id="blogname"><a href="index.html">Detachment
+        Soft</a></p>
+        <p></p>
+        <p id="i&quot;catchphrase&quot;">'Detach from space and
+        time through computation!</p><br>
+        <div id="nav">
+            <a href="about.html">About</a> <span class=
+            "sep">|</span> <a href="archive.html">Archive</a>
+            <span class="sep">|</span> <a href="tags.html">Tags</a>
+            <span class="sep">|</span> <a href="rss.xml">Rss</a>
+        </div>
+    </div>
+    <div id="content">
+        <div class="post-date">
+            01 Dec 2021
+        </div>
+        <h1 class="post-title"><a href=
+        "https://hughjfchen.github.io/2021-12-01-separate-data-interface-and-definition-when-designing-type.html">
+        Separate data interface and definition when designing
+        type</a></h1>
+        <div id="outline-container-org1f868c2" class="outline-2">
+            <h2 id="org1f868c2"><span class=
+            "section-number-2">1.</span> What is type design</h2>
+            <div class="outline-text-2" id="text-1">
+                <p>When you explore a domain, the first thing you
+                should do is to create a domain vocabularies which
+                can make it easier to communicate to others. Those
+                <code>vocabularies</code> are domain model and
+                usually represented with types. Types defines the
+                characteristic of the domain and with a
+                well-designed type model, you can go far far away
+                down to the problem path.</p>
+            </div>
+        </div>
+        <div id="outline-container-org3d0c2a1" class="outline-2">
+            <h2 id="org3d0c2a1"><span class=
+            "section-number-2">2.</span> What is data
+            interface</h2>
+            <div class="outline-text-2" id="text-2">
+                <p>An interface means something you expose to the
+                outside and can be used by others regardless of the
+                implementation detains.</p>
+            </div>
+        </div>
+        <div id="outline-container-org127d8d5" class="outline-2">
+            <h2 id="org127d8d5"><span class=
+            "section-number-2">3.</span> What is data
+            definition</h2>
+            <div class="outline-text-2" id="text-3">
+                <p>Data definition is the real implementation which
+                you should hide from others.</p>
+            </div>
+        </div>
+        <div id="outline-container-org27f3df8" class="outline-2">
+            <h2 id="org27f3df8"><span class=
+            "section-number-2">4.</span> how to separate the data
+            interface from the definition</h2>
+            <div class="outline-text-2" id="text-4">
+                <p>Take haskell for example, we can separate the
+                data interface from its real definition with
+                following design technique:</p>
+            </div>
+            <div id="outline-container-orgfbcc4e5" class=
+            "outline-3">
+                <h3 id="orgfbcc4e5"><span class=
+                "section-number-3">4.1.</span> Data interface</h3>
+                <div class="outline-text-3" id="text-4-1">
+                    <p>following create an interface for data</p>
+                    <ul class="org-ul">
+                        <li>Export a smart constructor instead of
+                        the data constructor(s). By this way, we
+                        hide the data real definitions to the
+                        outside world</li>
+                        <li>Not export the data constructor(s) will
+                        lose the feature for pattern matching. To
+                        regain this, we can define some
+                        <code>pattern synonyms</code> and export
+                        them with the type</li>
+                        <li>
+                            <p>So smart constructor and pattern
+                            synonyms create an interface for the
+                            type and the type definition is
+                            completely hidden from outside</p>
+                            <p>An example would be like
+                            following:</p>
+                            <div class="org-src-container">
+                                <pre class=
+                                "src src-haskell">  <span style=
+                                "color: #0000ff; font-weight: bold;">{-# LANGUAGE GeneralizedNewtypeDeriving, PatternSynonyms #-}</span>
+  <span style=
+"color: #00ffff; font-weight: bold;">module</span> <span style=
+"color: #00ff00;">SomeModule</span>
+  ( <span style=
+"color: #00ff00;">TypeConstructor</span>(<span style=
+"color: #00ff00;">PatternSynonyms</span>, unSomeType)
+  , <span style="color: #00ff00;">SmartConstructor</span>
+  , <span style="color: #00ff00;">OtherInterface</span>
+  ) <span style="color: #00ffff; font-weight: bold;">where</span>
+
+  <span style=
+"color: #00ffff; font-weight: bold;">newtype</span> <span style=
+"color: #00ff00;">SomeType</span> <span style=
+"color: #ffff00;">=</span> <span style=
+"color: #00ff00;">SomeTypeInternalDataConstructor</span> { unSomeType <span style="color: #ffff00;">::</span> <span style="color: #00ff00;">Text</span> } <span style="color: #00ffff; font-weight: bold;">deriving</span> (<span style="color: #00ff00;">Eq</span>, <span style="color: #00ff00;">Org</span>, <span style="color: #00ff00;">Show</span>)
+
+  <span style=
+"color: #00ffff; font-weight: bold;">pattern</span> <span style=
+"color: #00ff00;">SomeType</span> <span style=
+"color: #ffff00;">::</span> <span style=
+"color: #00ff00;">Text</span> <span style=
+"color: #ffff00;">-&gt;</span> <span style=
+"color: #00ff00;">SomeType</span>
+  <span style=
+"color: #00ffff; font-weight: bold;">pattern</span> <span style=
+"color: #00ff00;">SomeType</span> t <span style=
+"color: #ffff00;">&lt;-</span> <span style=
+"color: #00ff00;">SomeTypeInternalDataConstructor</span> { unSomeType <span style="color: #ffff00;">=</span> t }
+  <span style="color: #ffff00;">...</span>
+</pre>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="outline-container-orgcc4eb15" class=
+            "outline-3">
+                <h3 id="orgcc4eb15"><span class=
+                "section-number-3">4.2.</span> Data definition</h3>
+                <div class="outline-text-3" id="text-4-2">
+                    <p>By separating the interface, we have great
+                    flexibility to define our real data in the way
+                    we want.</p>
+                    <ul class="org-ul">
+                        <li>We can parse the data within the smart
+                        constructor and make sure the data is
+                        correct(kind of dependent type or
+                        refinement type)</li>
+                        <li>We can even use <code>view
+                        pattern</code> to check the correctness
+                        with any function</li>
+                        <li>
+                            <p>We can change the data definition
+                            freely, like change the using data
+                            structure</p>
+                            <p>An example as following:</p>
+                            <div class="org-src-container">
+                                <pre class=
+                                "src src-haskell">   <span style=
+                                "color: #0000ff; font-weight: bold;">{-# LANGUAGE GeneralizedNewtypeDeriving, ViewPatterns #-}</span>
+   <span style=
+"color: #00ffff; font-weight: bold;">newtype</span> <span style=
+"color: #00ff00;">SomeType</span> <span style=
+"color: #ffff00;">=</span> <span style=
+"color: #00ff00;">SomeTypeInternalDataConstructor</span> { unSomeType <span style="color: #ffff00;">::</span> <span style="color: #00ff00;">Text</span> } <span style="color: #00ffff; font-weight: bold;">deriving</span> (<span style="color: #00ff00;">Eq</span>, <span style="color: #00ff00;">Org</span>, <span style="color: #00ff00;">Show</span>)
+
+   viewPatternFunc <span style=
+"color: #ffff00;">::</span> <span style=
+"color: #00ff00;">SomeType</span> <span style=
+"color: #ffff00;">-&gt;</span> <span style=
+"color: #00ff00;">Bool</span>
+   viewPatternFunc st <span style=
+"color: #ffff00;">=</span> (checkF1 st)
+                     <span style=
+"color: #ffff00;">&amp;&</span> (checkF2 st)
+                     <span style=
+"color: #ffff00;">&amp;&</span> (checkF3 st)
+   mkSomeType <span style="color: #ffff00;">::</span> <span style=
+"color: #00ff00;">Text</span> <span style=
+"color: #ffff00;">-&gt;</span> <span style=
+"color: #00ff00;">Either</span> <span style=
+"color: #00ff00;">Text</span> <span style=
+"color: #00ff00;">SomeType</span>
+   mkSomeType t<span style=
+"color: #ffff00;">@</span>(viewPatternFunc <span style=
+"color: #ffff00;">-&gt;</span> <span style=
+"color: #00ff00;">True</span>) <span style=
+"color: #ffff00;">=</span> <span style=
+"color: #00ff00;">Right</span> <span style=
+"color: #ffff00;">$</span> <span style=
+"color: #00ff00;">SomeTypeInternalDataConstructor</span> t
+   mkSomeType t<span style="color: #ffff00;">@</span>(<span style=
+"color: #00ffff; font-weight: bold;">_</span>) <span style=
+"color: #ffff00;">=</span> <span style=
+"color: #00ff00;">Left</span> <span style=
+"color: #00ff00;">"Some error message"</span>
+</pre>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="taglist">
+            <a href=
+            "https://hughjfchen.github.io/tags.html">Tags</a>:
+            <a href="https://hughjfchen.github.io/tag-.html"></a>
+            <a href=
+            "https://hughjfchen.github.io/tag-haskell.html">haskell</a>
+            <a href="https://hughjfchen.github.io/tag-.html"></a>
+            <a href=
+            "https://hughjfchen.github.io/tag-type.html">type</a>
+            <a href="https://hughjfchen.github.io/tag-.html"></a>
+            <a href=
+            "https://hughjfchen.github.io/tag-design.html">design</a>
+            <a href="https://hughjfchen.github.io/tag-.html"></a>
+            <a href=
+            "https://hughjfchen.github.io/tag-interface.html">interface</a>
+            <a href="https://hughjfchen.github.io/tag-.html"></a>
+            <a href=
+            "https://hughjfchen.github.io/tag-definition.html">definition</a>
+            <a href="https://hughjfchen.github.io/tag-.html"></a>
+        </div>
+    </div>
+    <div id="postamble" class="status">
+        <footer>
+            This site belongs to <a href="index.html">Detachment
+            Soft</a> and the content is published under <a href=
+            "http://creativecommons.org/licenses/by-nc-sa/4.0/">CC
+            BY-NC-SA 4.0</a> license.<br>
+        </footer>
+    </div>
+</body>
+</html>

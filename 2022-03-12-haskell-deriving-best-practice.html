@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content=
+    "This blog summarize some best practice for deriving instances for haskell types.">
+    <link rel="alternate" type="application/rss+xml" href=
+    "https://hughjfchen.github.io/rss.xml" title=
+    "RSS feed for https://hughjfchen.github.io/">
+    <title>haskell deriving best practice</title>
+    <meta name="author" content="Hugh Chen">
+    <meta name="referrer" content="no-referrer">
+    <link href="static/default.css" rel="stylesheet" type=
+    "text/css">
+    <link href="static/code.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="static/favicon.ico">
+    <meta name="viewport" content=
+    "width=device-width, initial-scale=1">
+    <meta name="generator" content="org-blog-static">
+</head>
+<body>
+    <div id="preamble" class="status">
+        <p id="blogname"><a href="index.html">Detachment
+        Soft</a></p>
+        <p></p>
+        <p id="i&quot;catchphrase&quot;">'Detach from space and
+        time through computation!</p><br>
+        <div id="nav">
+            <a href="about.html">About</a> <span class=
+            "sep">|</span> <a href="archive.html">Archive</a>
+            <span class="sep">|</span> <a href="tags.html">Tags</a>
+            <span class="sep">|</span> <a href="rss.xml">Rss</a>
+        </div>
+    </div>
+    <div id="content">
+        <div class="post-date">
+            12 Mar 2022
+        </div>
+        <h1 class="post-title"><a href=
+        "https://hughjfchen.github.io/2022-03-12-haskell-deriving-best-practice.html">
+        haskell deriving best practice</a></h1>
+        <div id="outline-container-org5d26e14" class="outline-2">
+            <h2 id="org5d26e14"><span class=
+            "section-number-2">1.</span> Haskell Typeclass
+            Instances</h2>
+            <div class="outline-text-2" id="text-1">
+                <p>Like it or hate it, you need to define a lot of
+                typeclass instances when you define haskell types.
+                The easy way to mitigate this annoying problem is
+                to derive instances for the defined types.
+                Following is some best practice for deriving
+                instances.</p>
+            </div>
+            <div id="outline-container-org459e970" class=
+            "outline-3">
+                <h3 id="org459e970"><span class=
+                "section-number-3">1.1.</span> What to derive</h3>
+                <div class="outline-text-3" id="text-1-1">
+                    <p>The first question is what instances to
+                    derive for the defined type. Following is a
+                    simple guileline:</p>
+                    <ul class="org-ul">
+                        <li>For any types, the <b>Show</b>,
+                        <b>Typeable</b>, <b>Generic</b> instance
+                        should be derived</li>
+                        <li>For sum types, the <b>Ord</b>,
+                        <b>Eq</b> should be derived</li>
+                        <li>For <b>Read</b> instance, it
+                        depends</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="outline-container-org02e73d6" class=
+            "outline-3">
+                <h3 id="org02e73d6"><span class=
+                "section-number-3">1.2.</span> Deriving
+                stratege</h3>
+                <div class="outline-text-3" id="text-1-2">
+                    <p>Next question is how to derive those
+                    instances for the defined types. Following
+                    summarize the guideline:</p>
+                    <ul class="org-ul">
+                        <li>Use <b>stock</b> stratege to derive
+                        some standard type classes, like
+                        <b>Show</b>, <b>Ord</b>, <b>Eq</b>,
+                        <b>Typeable</b> and <b>Generic</b></li>
+                        <li>Use <b>newtype</b> stratege to derive
+                        instances for <code>newtype</code>
+                        definition</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="taglist">
+            <a href=
+            "https://hughjfchen.github.io/tags.html">Tags</a>:
+            <a href=
+            "https://hughjfchen.github.io/tag-haskell.html">haskell</a>
+        </div>
+    </div>
+    <div id="postamble" class="status">
+        <footer>
+            This site belongs to <a href="index.html">Detachment
+            Soft</a> and the content is published under <a href=
+            "http://creativecommons.org/licenses/by-nc-sa/4.0/">CC
+            BY-NC-SA 4.0</a> license.<br>
+        </footer>
+    </div>
+</body>
+</html>
