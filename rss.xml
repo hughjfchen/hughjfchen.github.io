@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>
+<![CDATA[DetachmentSoft]]>
+    </title>
+    <description>
+<![CDATA[DetachmentSoft]]>
+    </description>
+    <link>https://hughjfchen.github.io/</link>
+    <lastBuildDate>Sun, 25 Sep 2022 22:20:10 +0800</lastBuildDate>
+    <item>
+      <title>
+<![CDATA[about]]>
+      </title>
+      <description>
+<![CDATA[
+        <p>This is my blog, where I occasionally write down I think
+        what is important and may worth referring to later.</p>
+        <div class="taglist">
+            <a href=
+            "https://hughjfchen.github.io/tags.html">Tags</a>:
+            <a href=
+            "https://hughjfchen.github.io/tag-about.html">about</a>
+            <a href=
+            "https://hughjfchen.github.io/tag-blog.html">blog</a>
+        </div>
+    ]]>
+      </description>
+      <category>
+<![CDATA[about]]>
+      </category>
+      <category>
+<![CDATA[blog]]>
+      </category>
+      <link>https://hughjfchen.github.io/about.html</link>
+      <guid>https://hughjfchen.github.io/about.html</guid>
+      <pubDate>Sun, 25 Sep 2022 22:16:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>
+<![CDATA[haskell deriving best practice]]>
+      </title>
+      <description>
+<![CDATA[
+        <div id="outline-container-org5d26e14" class="outline-2">
+            <h2 id="org5d26e14"><span class=
+            "section-number-2">1.</span> Haskell Typeclass
+            Instances</h2>
+            <div class="outline-text-2" id="text-1">
+                <p>Like it or hate it, you need to define a lot of
+                typeclass instances when you define haskell types.
+                The easy way to mitigate this annoying problem is
+                to derive instances for the defined types.
+                Following is some best practice for deriving
+                instances.</p>
+            </div>
+            <div id="outline-container-org459e970" class=
+            "outline-3">
+                <h3 id="org459e970"><span class=
+                "section-number-3">1.1.</span> What to derive</h3>
+                <div class="outline-text-3" id="text-1-1">
+                    <p>The first question is what instances to
+                    derive for the defined type. Following is a
+                    simple guileline:</p>
+                    <ul class="org-ul">
+                        <li>For any types, the <b>Show</b>,
+                        <b>Typeable</b>, <b>Generic</b> instance
+                        should be derived</li>
+                        <li>For sum types, the <b>Ord</b>,
+                        <b>Eq</b> should be derived</li>
+                        <li>For <b>Read</b> instance, it
+                        depends</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="outline-container-org02e73d6" class=
+            "outline-3">
+                <h3 id="org02e73d6"><span class=
+                "section-number-3">1.2.</span> Deriving
+                stratege</h3>
+                <div class="outline-text-3" id="text-1-2">
+                    <p>Next question is how to derive those
+                    instances for the defined types. Following
+                    summarize the guideline:</p>
+                    <ul class="org-ul">
+                        <li>Use <b>stock</b> stratege to derive
+                        some standard type classes, like
+                        <b>Show</b>, <b>Ord</b>, <b>Eq</b>,
+                        <b>Typeable</b> and <b>Generic</b></li>
+                        <li>Use <b>newtype</b> stratege to derive
+                        instances for <code>newtype</code>
+                        definition</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="taglist">
+            <a href=
+            "https://hughjfchen.github.io/tags.html">Tags</a>:
+            <a href=
+            "https://hughjfchen.github.io/tag-haskell.html">haskell</a>
+        </div>
+    ]]>
+      </description>
+      <category>
+<![CDATA[haskell]]>
+      </category>
+      <link>
+      https://hughjfchen.github.io/2022-03-12-haskell-deriving-best-practice.html</link>
+      <guid>
+      https://hughjfchen.github.io/2022-03-12-haskell-deriving-best-practice.html</guid>
+      <pubDate>Sat, 12 Mar 2022 10:39:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>
+<![CDATA[Separate data interface and definition when designing type]]>
+      </title>
+      <description>
+<![CDATA[
+        <div id="outline-container-org1f868c2" class="outline-2">
+            <h2 id="org1f868c2"><span class=
+            "section-number-2">1.</span> What is type design</h2>
+            <div class="outline-text-2" id="text-1">
+                <p>When you explore a domain, the first thing you
+                should do is to create a domain vocabularies which
+                can make it easier to communicate to others. Those
+                <code>vocabularies</code> are domain model and
+                usually represented with types. Types defines the
+                characteristic of the domain and with a
+                well-designed type model, you can go far far away
+                down to the problem path.</p>
+            </div>
+        </div>
+        <div id="outline-container-org3d0c2a1" class="outline-2">
+            <h2 id="org3d0c2a1"><span class=
+            "section-number-2">2.</span> What is data
+            interface</h2>
+            <div class="outline-text-2" id="text-2">
+                <p>An interface means something you expose to the
+                outside and can be used by others regardless of the
+                implementation detains.</p>
+            </div>
+        </div>
+        <div id="outline-container-org127d8d5" class="outline-2">
+            <h2 id="org127d8d5"><span class=
+            "section-number-2">3.</span> What is data
+            definition</h2>
+            <div class="outline-text-2" id="text-3">
+                <p>Data definition is the real implementation which
+                you should hide from others.</p>
+            </div>
+        </div>
+        <div id="outline-container-org27f3df8" class="outline-2">
+            <h2 id="org27f3df8"><span class=
+            "section-number-2">4.</span> how to separate the data
+            interface from the definition</h2>
+            <div class="outline-text-2" id="text-4">
+                <p>Take haskell for example, we can separate the
+                data interface from its real definition with
+                following design technique:</p>
+            </div>
+            <div id="outline-container-orgfbcc4e5" class=
+            "outline-3">
+                <h3 id="orgfbcc4e5"><span class=
+                "section-number-3">4.1.</span> Data interface</h3>
+                <div class="outline-text-3" id="text-4-1">
+                    <p>following create an interface for data</p>
+                    <ul class="org-ul">
+                        <li>Export a smart constructor instead of
+                        the data constructor(s). By this way, we
+                        hide the data real definitions to the
+                        outside world</li>
+                        <li>Not export the data constructor(s) will
+                        lose the feature for pattern matching. To
+                        regain this, we can define some
+                        <code>pattern synonyms</code> and export
+                        them with the type</li>
+                        <li>
+                            <p>So smart constructor and pattern
+                            synonyms create an interface for the
+                            type and the type definition is
+                            completely hidden from outside</p>
+                            <p>An example would be like
+                            following:</p>
+                            <div class="org-src-container">
+                                <pre class=
+                                "src src-haskell">  <span style=
+                                "color: #0000ff; font-weight: bold;">{-# LANGUAGE GeneralizedNewtypeDeriving, PatternSynonyms #-}</span>
+  <span style=
+"color: #00ffff; font-weight: bold;">module</span> <span style=
+"color: #00ff00;">SomeModule</span>
+  ( <span style=
+"color: #00ff00;">TypeConstructor</span>(<span style=
+"color: #00ff00;">PatternSynonyms</span>, unSomeType)
+  , <span style="color: #00ff00;">SmartConstructor</span>
+  , <span style="color: #00ff00;">OtherInterface</span>
+  ) <span style="color: #00ffff; font-weight: bold;">where</span>
+
+  <span style=
+"color: #00ffff; font-weight: bold;">newtype</span> <span style=
+"color: #00ff00;">SomeType</span> <span style=
+"color: #ffff00;">=</span> <span style=
+"color: #00ff00;">SomeTypeInternalDataConstructor</span> { unSomeType <span style="color: #ffff00;">::</span> <span style="color: #00ff00;">Text</span> } <span style="color: #00ffff; font-weight: bold;">deriving</span> (<span style="color: #00ff00;">Eq</span>, <span style="color: #00ff00;">Org</span>, <span style="color: #00ff00;">Show</span>)
+
+  <span style=
+"color: #00ffff; font-weight: bold;">pattern</span> <span style=
+"color: #00ff00;">SomeType</span> <span style=
+"color: #ffff00;">::</span> <span style=
+"color: #00ff00;">Text</span> <span style=
+"color: #ffff00;">-&gt;</span> <span style=
+"color: #00ff00;">SomeType</span>
+  <span style=
+"color: #00ffff; font-weight: bold;">pattern</span> <span style=
+"color: #00ff00;">SomeType</span> t <span style=
+"color: #ffff00;">&lt;-</span> <span style=
+"color: #00ff00;">SomeTypeInternalDataConstructor</span> { unSomeType <span style="color: #ffff00;">=</span> t }
+  <span style="color: #ffff00;">...</span>
+</pre>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="outline-container-orgcc4eb15" class=
+            "outline-3">
+                <h3 id="orgcc4eb15"><span class=
+                "section-number-3">4.2.</span> Data definition</h3>
+                <div class="outline-text-3" id="text-4-2">
+                    <p>By separating the interface, we have great
+                    flexibility to define our real data in the way
+                    we want.</p>
+                    <ul class="org-ul">
+                        <li>We can parse the data within the smart
+                        constructor and make sure the data is
+                        correct(kind of dependent type or
+                        refinement type)</li>
+                        <li>We can even use <code>view
+                        pattern</code> to check the correctness
+                        with any function</li>
+                        <li>
+                            <p>We can change the data definition
+                            freely, like change the using data
+                            structure</p>
+                            <p>An example as following:</p>
+                            <div class="org-src-container">
+                                <pre class=
+                                "src src-haskell">   <span style=
+                                "color: #0000ff; font-weight: bold;">{-# LANGUAGE GeneralizedNewtypeDeriving, ViewPatterns #-}</span>
+   <span style=
+"color: #00ffff; font-weight: bold;">newtype</span> <span style=
+"color: #00ff00;">SomeType</span> <span style=
+"color: #ffff00;">=</span> <span style=
+"color: #00ff00;">SomeTypeInternalDataConstructor</span> { unSomeType <span style="color: #ffff00;">::</span> <span style="color: #00ff00;">Text</span> } <span style="color: #00ffff; font-weight: bold;">deriving</span> (<span style="color: #00ff00;">Eq</span>, <span style="color: #00ff00;">Org</span>, <span style="color: #00ff00;">Show</span>)
+
+   viewPatternFunc <span style=
+"color: #ffff00;">::</span> <span style=
+"color: #00ff00;">SomeType</span> <span style=
+"color: #ffff00;">-&gt;</span> <span style=
+"color: #00ff00;">Bool</span>
+   viewPatternFunc st <span style=
+"color: #ffff00;">=</span> (checkF1 st)
+                     <span style=
+"color: #ffff00;">&amp;&</span> (checkF2 st)
+                     <span style=
+"color: #ffff00;">&amp;&</span> (checkF3 st)
+   mkSomeType <span style="color: #ffff00;">::</span> <span style=
+"color: #00ff00;">Text</span> <span style=
+"color: #ffff00;">-&gt;</span> <span style=
+"color: #00ff00;">Either</span> <span style=
+"color: #00ff00;">Text</span> <span style=
+"color: #00ff00;">SomeType</span>
+   mkSomeType t<span style=
+"color: #ffff00;">@</span>(viewPatternFunc <span style=
+"color: #ffff00;">-&gt;</span> <span style=
+"color: #00ff00;">True</span>) <span style=
+"color: #ffff00;">=</span> <span style=
+"color: #00ff00;">Right</span> <span style=
+"color: #ffff00;">$</span> <span style=
+"color: #00ff00;">SomeTypeInternalDataConstructor</span> t
+   mkSomeType t<span style="color: #ffff00;">@</span>(<span style=
+"color: #00ffff; font-weight: bold;">_</span>) <span style=
+"color: #ffff00;">=</span> <span style=
+"color: #00ff00;">Left</span> <span style=
+"color: #00ff00;">"Some error message"</span>
+</pre>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="taglist">
+            <a href=
+            "https://hughjfchen.github.io/tags.html">Tags</a>:
+            <a href="https://hughjfchen.github.io/tag-.html"></a>
+            <a href=
+            "https://hughjfchen.github.io/tag-haskell.html">haskell</a>
+            <a href="https://hughjfchen.github.io/tag-.html"></a>
+            <a href=
+            "https://hughjfchen.github.io/tag-type.html">type</a>
+            <a href="https://hughjfchen.github.io/tag-.html"></a>
+            <a href=
+            "https://hughjfchen.github.io/tag-design.html">design</a>
+            <a href="https://hughjfchen.github.io/tag-.html"></a>
+            <a href=
+            "https://hughjfchen.github.io/tag-interface.html">interface</a>
+            <a href="https://hughjfchen.github.io/tag-.html"></a>
+            <a href=
+            "https://hughjfchen.github.io/tag-definition.html">definition</a>
+            <a href="https://hughjfchen.github.io/tag-.html"></a>
+        </div>
+    ]]>
+      </description>
+      <category>
+<![CDATA[]]>
+      </category>
+      <category>
+<![CDATA[haskell]]>
+      </category>
+      <category>
+<![CDATA[]]>
+      </category>
+      <category>
+<![CDATA[type]]>
+      </category>
+      <category>
+<![CDATA[]]>
+      </category>
+      <category>
+<![CDATA[design]]>
+      </category>
+      <category>
+<![CDATA[]]>
+      </category>
+      <category>
+<![CDATA[interface]]>
+      </category>
+      <category>
+<![CDATA[]]>
+      </category>
+      <category>
+<![CDATA[definition]]>
+      </category>
+      <category>
+<![CDATA[]]>
+      </category>
+      <link>
+      https://hughjfchen.github.io/2021-12-01-separate-data-interface-and-definition-when-designing-type.html</link>
+      <guid>
+      https://hughjfchen.github.io/2021-12-01-separate-data-interface-and-definition-when-designing-type.html</guid>
+      <pubDate>Wed, 01 Dec 2021 08:06:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>
+<![CDATA[Structure your shell script with monad stack]]>
+      </title>
+      <description>
+<![CDATA[
+        <div id="outline-container-org590925c" class="outline-2">
+            <h2 id="org590925c"><span class=
+            "section-number-2">1.</span> Shell Script Full of
+            Effects</h2>
+            <div class="outline-text-2" id="text-1">
+                <p>We write a lot of shell scripts during our
+                career as programmer. If you read them with a
+                little carefulness, you will find that almost every
+                command within the shell script is conducting some
+                effect to make some change to outside world.</p>
+            </div>
+        </div>
+        <div class="taglist">
+            <a href=
+            "https://hughjfchen.github.io/tags.html">Tags</a>:
+            <a href="https://hughjfchen.github.io/tag-.html"></a>
+            <a href=
+            "https://hughjfchen.github.io/tag-shell%20script.html">shell
+            script</a> <a href=
+            "https://hughjfchen.github.io/tag-.html"></a> <a href=
+            "https://hughjfchen.github.io/tag-fp.html">FP</a>
+            <a href="https://hughjfchen.github.io/tag-.html"></a>
+            <a href=
+            "https://hughjfchen.github.io/tag-monad%20stack.html">monad
+            stack</a> <a href=
+            "https://hughjfchen.github.io/tag-.html"></a>
+        </div>
+    ]]>
+      </description>
+      <category>
+<![CDATA[]]>
+      </category>
+      <category>
+<![CDATA[shell script]]>
+      </category>
+      <category>
+<![CDATA[]]>
+      </category>
+      <category>
+<![CDATA[FP]]>
+      </category>
+      <category>
+<![CDATA[]]>
+      </category>
+      <category>
+<![CDATA[monad stack]]>
+      </category>
+      <category>
+<![CDATA[]]>
+      </category>
+      <link>
+      https://hughjfchen.github.io/2021-11-21-structure-your-shell-script-with-monad-stack.html</link>
+      <guid>
+      https://hughjfchen.github.io/2021-11-21-structure-your-shell-script-with-monad-stack.html</guid>
+      <pubDate>Sun, 21 Nov 2021 01:27:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>
+<![CDATA[Add extra build tools to haskell.nix project]]>
+      </title>
+      <description>
+<![CDATA[
+        <div id="outline-container-org9e7aad0" class="outline-2">
+            <h2 id="org9e7aad0"><span class=
+            "section-number-2">1.</span> Why</h2>
+            <div class="outline-text-2" id="text-1">
+                <p>Sometimes you will need some extra tools to
+                build your project. For the
+                <code>RecordDotSyntax</code> feature, you will need
+                a ghc plugin or a pre processer to build.</p>
+            </div>
+        </div>
+        <div class="taglist">
+            <a href=
+            "https://hughjfchen.github.io/tags.html">Tags</a>:
+            <a href="https://hughjfchen.github.io/tag-.html"></a>
+            <a href=
+            "https://hughjfchen.github.io/tag-haskell.nix.html">haskell.nix</a>
+            <a href="https://hughjfchen.github.io/tag-.html"></a>
+            <a href=
+            "https://hughjfchen.github.io/tag-buildtools.html">buildtools</a>
+            <a href="https://hughjfchen.github.io/tag-.html"></a>
+            <a href=
+            "https://hughjfchen.github.io/tag-plugin.html">plugin</a>
+            <a href="https://hughjfchen.github.io/tag-.html"></a>
+        </div>
+    ]]>
+      </description>
+      <category>
+<![CDATA[]]>
+      </category>
+      <category>
+<![CDATA[haskell.nix]]>
+      </category>
+      <category>
+<![CDATA[]]>
+      </category>
+      <category>
+<![CDATA[buildtools]]>
+      </category>
+      <category>
+<![CDATA[]]>
+      </category>
+      <category>
+<![CDATA[plugin]]>
+      </category>
+      <category>
+<![CDATA[]]>
+      </category>
+      <link>
+      https://hughjfchen.github.io/2021-10-24-add-extra-build-tools-to-haskell.nix-project.html</link>
+      <guid>
+      https://hughjfchen.github.io/2021-10-24-add-extra-build-tools-to-haskell.nix-project.html</guid>
+      <pubDate>Sun, 24 Oct 2021 21:08:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>
+<![CDATA[Prelude]]>
+      </title>
+      <description>
+<![CDATA[
+        <div id="outline-container-org4ac5023" class="outline-2">
+            <h2 id="org4ac5023"><span class=
+            "section-number-2">1.</span> Prelude</h2>
+            <div class="outline-text-2" id="text-1">
+                <p>How can we create a new world? By observe the
+                old one?</p>
+            </div>
+            <div id="outline-container-org6332c07" class=
+            "outline-3">
+                <h3 id="org6332c07"><span class=
+                "section-number-3">1.1.</span> Power source</h3>
+                <div class="outline-text-3" id="text-1-1">
+                    <p>Image you’re a master and you have power but
+                    you can’t be sure you have enough power to
+                    create a new world. What you should do?
+                    Nothing, you just do it. Only doing it can let
+                    you know if you have enough power for this
+                    purpose.</p>
+                </div>
+            </div>
+            <div id="outline-container-org5a2ae3b" class=
+            "outline-3">
+                <h3 id="org5a2ae3b"><span class=
+                "section-number-3">1.2.</span> Do it</h3>
+                <div class="outline-text-3" id="text-1-2">
+                    <p>Yes, just do it.</p>
+                </div>
+            </div>
+        </div>
+        <div id="outline-container-org443a616" class="outline-2">
+            <h2 id="org443a616"><span class=
+            "section-number-2">2.</span> Afterware</h2>
+        </div>
+        <div id="outline-container-org088d6b8" class="outline-2">
+            <h2 id="org088d6b8"><span class=
+            "section-number-2">3.</span> Time</h2>
+        </div>
+        <div id="outline-container-orgd1310e9" class="outline-2">
+            <h2 id="orgd1310e9"><span class=
+            "section-number-2">4.</span> Space</h2>
+        </div>
+        <div id="outline-container-orgd4d05b4" class="outline-2">
+            <h2 id="orgd4d05b4"><span class=
+            "section-number-2">5.</span> 中华民族</h2>
+            <div class="outline-text-2" id="text-5">
+                <p>从这一刻开始，中华民族作为一个完整的民族登上了历史舞台。</p>
+            </div>
+        </div>
+        <div class="taglist">
+            <a href=
+            "https://hughjfchen.github.io/tags.html">Tags</a>:
+            <a href=
+            "https://hughjfchen.github.io/tag-blog.html">blog</a>
+            <a href=
+            "https://hughjfchen.github.io/tag-prelude.html">prelude</a>
+            <a href=
+            "https://hughjfchen.github.io/tag-detachment.html">detachment</a>
+        </div>
+    ]]>
+      </description>
+      <category>
+<![CDATA[blog]]>
+      </category>
+      <category>
+<![CDATA[prelude]]>
+      </category>
+      <category>
+<![CDATA[detachment]]>
+      </category>
+      <link>
+      https://hughjfchen.github.io/2021-10-10-prelude.html</link>
+      <guid>
+      https://hughjfchen.github.io/2021-10-10-prelude.html</guid>
+      <pubDate>Sun, 10 Oct 2021 08:47:00 +0800</pubDate>
+    </item>
+  </channel>
+</rss>
