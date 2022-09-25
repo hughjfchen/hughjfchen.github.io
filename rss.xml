@@ -8,7 +8,7 @@
 <![CDATA[DetachmentSoft]]>
     </description>
     <link>https://hughjfchen.github.io/</link>
-    <lastBuildDate>Sun, 25 Sep 2022 22:20:10 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 25 Sep 2022 22:45:47 +0800</lastBuildDate>
     <item>
       <title>
 <![CDATA[about]]>
@@ -419,14 +419,37 @@
       </title>
       <description>
 <![CDATA[
-        <div id="outline-container-org9e7aad0" class="outline-2">
-            <h2 id="org9e7aad0"><span class=
+        <div id="outline-container-org9480a13" class="outline-2">
+            <h2 id="org9480a13"><span class=
             "section-number-2">1.</span> Why</h2>
             <div class="outline-text-2" id="text-1">
                 <p>Sometimes you will need some extra tools to
                 build your project. For the
                 <code>RecordDotSyntax</code> feature, you will need
                 a ghc plugin or a pre processer to build.</p>
+            </div>
+        </div>
+        <div id="outline-container-org092dbb6" class="outline-2">
+            <h2 id="org092dbb6"><span class=
+            "section-number-2">2.</span> Cabal
+            build-tool-depends</h2>
+            <div class="outline-text-2" id="text-2">
+                <p>This flag is used by cabal, but looks like cabal
+                only builds the library but won’t add the
+                executable into the PATH during the following build
+                process. There is a issue to track this: <a href=
+                "https://github.com/haskell/cabal/issues/8434">https://github.com/haskell/cabal/issues/8434</a></p>
+            </div>
+        </div>
+        <div id="outline-container-org0487635" class="outline-2">
+            <h2 id="org0487635"><span class=
+            "section-number-2">3.</span> haskell.nix
+            executableToolDepends</h2>
+            <div class="outline-text-2" id="text-3">
+                <p>There also is a issue track in haskell.nix:
+                <a href=
+                "https://github.com/input-output-hk/haskell.nix/issues/839">
+                https://github.com/input-output-hk/haskell.nix/issues/839</a></p>
             </div>
         </div>
         <div class="taglist">
