@@ -1,7 +1,7 @@
 #+title: Structure your shell script with monad stack
 #+date: <2021-11-21 01:27>
 #+description: This post explore a new way how to structure shell scripts based on FP monad stack.
-#+filetags: shell script::FP::monad stack
+#+filetags: ::shell script::FP::monad stack::
 
 * Shell Script Full of Effects
 We write a lot of shell scripts during our career as a programmer. If you read them with a little
