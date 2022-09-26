@@ -8,7 +8,7 @@
 <![CDATA[DetachmentSoft]]>
     </description>
     <link>https://hughjfchen.github.io/</link>
-    <lastBuildDate>Mon, 26 Sep 2022 08:48:46 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 26 Sep 2022 09:10:29 +0800</lastBuildDate>
     <item>
       <title>
 <![CDATA[about]]>
@@ -21,17 +21,12 @@
             <a href=
             "https://hughjfchen.github.io/tags.html">Tags</a>:
             <a href=
-            "https://hughjfchen.github.io/tag-about.html">about</a>
-            <a href=
-            "https://hughjfchen.github.io/tag-blog.html">blog</a>
+            "https://hughjfchen.github.io/tag-about::blog.html">about::blog</a>
         </div>
     ]]>
       </description>
       <category>
-<![CDATA[about]]>
-      </category>
-      <category>
-<![CDATA[blog]]>
+<![CDATA[about::blog]]>
       </category>
       <link>https://hughjfchen.github.io/about.html</link>
       <guid>https://hughjfchen.github.io/about.html</guid>
@@ -357,8 +352,8 @@
       </title>
       <description>
 <![CDATA[
-        <div id="outline-container-orgf5043ec" class="outline-2">
-            <h2 id="orgf5043ec"><span class=
+        <div id="outline-container-org2d8b8c1" class="outline-2">
+            <h2 id="org2d8b8c1"><span class=
             "section-number-2">1.</span> Shell Script Full of
             Effects</h2>
             <div class="outline-text-2" id="text-1">
@@ -378,40 +373,23 @@
         <div class="taglist">
             <a href=
             "https://hughjfchen.github.io/tags.html">Tags</a>:
-            <a href="https://hughjfchen.github.io/tag-.html"></a>
             <a href=
-            "https://hughjfchen.github.io/tag-shell%20script.html">shell
-            script</a> <a href=
-            "https://hughjfchen.github.io/tag-.html"></a> <a href=
-            "https://hughjfchen.github.io/tag-fp.html">FP</a>
-            <a href="https://hughjfchen.github.io/tag-.html"></a>
+            "https://hughjfchen.github.io/tag-shell.html">shell</a>
             <a href=
-            "https://hughjfchen.github.io/tag-monad%20stack.html">monad
-            stack</a> <a href=
-            "https://hughjfchen.github.io/tag-.html"></a>
+            "https://hughjfchen.github.io/tag-script::fp::monad.html">
+            script::FP::monad</a> <a href=
+            "https://hughjfchen.github.io/tag-stack.html">stack</a>
         </div>
     ]]>
       </description>
       <category>
-<![CDATA[]]>
+<![CDATA[shell]]>
       </category>
       <category>
-<![CDATA[shell script]]>
+<![CDATA[script::FP::monad]]>
       </category>
       <category>
-<![CDATA[]]>
-      </category>
-      <category>
-<![CDATA[FP]]>
-      </category>
-      <category>
-<![CDATA[]]>
-      </category>
-      <category>
-<![CDATA[monad stack]]>
-      </category>
-      <category>
-<![CDATA[]]>
+<![CDATA[stack]]>
       </category>
       <link>
       https://hughjfchen.github.io/2021-11-21-structure-your-shell-script-with-monad-stack.html</link>
@@ -425,8 +403,8 @@
       </title>
       <description>
 <![CDATA[
-        <div id="outline-container-org9480a13" class="outline-2">
-            <h2 id="org9480a13"><span class=
+        <div id="outline-container-org2f36378" class="outline-2">
+            <h2 id="org2f36378"><span class=
             "section-number-2">1.</span> Why</h2>
             <div class="outline-text-2" id="text-1">
                 <p>Sometimes you will need some extra tools to
@@ -435,8 +413,8 @@
                 a ghc plugin or a pre processer to build.</p>
             </div>
         </div>
-        <div id="outline-container-org092dbb6" class="outline-2">
-            <h2 id="org092dbb6"><span class=
+        <div id="outline-container-org6fa2dd7" class="outline-2">
+            <h2 id="org6fa2dd7"><span class=
             "section-number-2">2.</span> Cabal
             build-tool-depends</h2>
             <div class="outline-text-2" id="text-2">
@@ -447,8 +425,8 @@
                 "https://github.com/haskell/cabal/issues/8434">https://github.com/haskell/cabal/issues/8434</a></p>
             </div>
         </div>
-        <div id="outline-container-org0487635" class="outline-2">
-            <h2 id="org0487635"><span class=
+        <div id="outline-container-org0f4d520" class="outline-2">
+            <h2 id="org0f4d520"><span class=
             "section-number-2">3.</span> haskell.nix
             executableToolDepends</h2>
             <div class="outline-text-2" id="text-3">
@@ -461,39 +439,14 @@
         <div class="taglist">
             <a href=
             "https://hughjfchen.github.io/tags.html">Tags</a>:
-            <a href="https://hughjfchen.github.io/tag-.html"></a>
             <a href=
-            "https://hughjfchen.github.io/tag-haskell.nix.html">haskell.nix</a>
-            <a href="https://hughjfchen.github.io/tag-.html"></a>
-            <a href=
-            "https://hughjfchen.github.io/tag-buildtools.html">buildtools</a>
-            <a href="https://hughjfchen.github.io/tag-.html"></a>
-            <a href=
-            "https://hughjfchen.github.io/tag-plugin.html">plugin</a>
-            <a href="https://hughjfchen.github.io/tag-.html"></a>
+            "https://hughjfchen.github.io/tag-haskell.nix::buildtools::plugin.html">
+            haskell.nix::buildtools::plugin</a>
         </div>
     ]]>
       </description>
       <category>
-<![CDATA[]]>
-      </category>
-      <category>
-<![CDATA[haskell.nix]]>
-      </category>
-      <category>
-<![CDATA[]]>
-      </category>
-      <category>
-<![CDATA[buildtools]]>
-      </category>
-      <category>
-<![CDATA[]]>
-      </category>
-      <category>
-<![CDATA[plugin]]>
-      </category>
-      <category>
-<![CDATA[]]>
+<![CDATA[haskell.nix::buildtools::plugin]]>
       </category>
       <link>
       https://hughjfchen.github.io/2021-10-24-add-extra-build-tools-to-haskell.nix-project.html</link>
@@ -507,16 +460,16 @@
       </title>
       <description>
 <![CDATA[
-        <div id="outline-container-org4ac5023" class="outline-2">
-            <h2 id="org4ac5023"><span class=
+        <div id="outline-container-orgd60c45a" class="outline-2">
+            <h2 id="orgd60c45a"><span class=
             "section-number-2">1.</span> Prelude</h2>
             <div class="outline-text-2" id="text-1">
                 <p>How can we create a new world? By observe the
                 old one?</p>
             </div>
-            <div id="outline-container-org6332c07" class=
+            <div id="outline-container-orga8f35d0" class=
             "outline-3">
-                <h3 id="org6332c07"><span class=
+                <h3 id="orga8f35d0"><span class=
                 "section-number-3">1.1.</span> Power source</h3>
                 <div class="outline-text-3" id="text-1-1">
                     <p>Image you’re a master and you have power but
@@ -527,29 +480,29 @@
                     purpose.</p>
                 </div>
             </div>
-            <div id="outline-container-org5a2ae3b" class=
+            <div id="outline-container-org95d24fd" class=
             "outline-3">
-                <h3 id="org5a2ae3b"><span class=
+                <h3 id="org95d24fd"><span class=
                 "section-number-3">1.2.</span> Do it</h3>
                 <div class="outline-text-3" id="text-1-2">
                     <p>Yes, just do it.</p>
                 </div>
             </div>
         </div>
-        <div id="outline-container-org443a616" class="outline-2">
-            <h2 id="org443a616"><span class=
+        <div id="outline-container-orgd053c5b" class="outline-2">
+            <h2 id="orgd053c5b"><span class=
             "section-number-2">2.</span> Afterware</h2>
         </div>
-        <div id="outline-container-org088d6b8" class="outline-2">
-            <h2 id="org088d6b8"><span class=
+        <div id="outline-container-org6cc49e5" class="outline-2">
+            <h2 id="org6cc49e5"><span class=
             "section-number-2">3.</span> Time</h2>
         </div>
-        <div id="outline-container-orgd1310e9" class="outline-2">
-            <h2 id="orgd1310e9"><span class=
+        <div id="outline-container-org7d37081" class="outline-2">
+            <h2 id="org7d37081"><span class=
             "section-number-2">4.</span> Space</h2>
         </div>
-        <div id="outline-container-orgd4d05b4" class="outline-2">
-            <h2 id="orgd4d05b4"><span class=
+        <div id="outline-container-org5cc9e36" class="outline-2">
+            <h2 id="org5cc9e36"><span class=
             "section-number-2">5.</span> 中华民族</h2>
             <div class="outline-text-2" id="text-5">
                 <p>从这一刻开始，中华民族作为一个完整的民族登上了历史舞台。</p>
@@ -559,22 +512,13 @@
             <a href=
             "https://hughjfchen.github.io/tags.html">Tags</a>:
             <a href=
-            "https://hughjfchen.github.io/tag-blog.html">blog</a>
-            <a href=
-            "https://hughjfchen.github.io/tag-prelude.html">prelude</a>
-            <a href=
-            "https://hughjfchen.github.io/tag-detachment.html">detachment</a>
+            "https://hughjfchen.github.io/tag-blog::prelude::detachment.html">
+            blog::prelude::detachment</a>
         </div>
     ]]>
       </description>
       <category>
-<![CDATA[blog]]>
-      </category>
-      <category>
-<![CDATA[prelude]]>
-      </category>
-      <category>
-<![CDATA[detachment]]>
+<![CDATA[blog::prelude::detachment]]>
       </category>
       <link>
       https://hughjfchen.github.io/2021-10-10-prelude.html</link>
