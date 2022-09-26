@@ -1,6 +1,6 @@
 #+title: about
 #+date: <2022-09-25 22:16>
 #+description:  this is about my blog
-#+filetags: ::blog::about::
+#+filetags: :blog:about:
 
 This is my blog, where I occasionally write down I think what is important and may worth referring to later.

@@ -1,7 +1,7 @@
 #+title: Separate data interface and definition when designing type
 #+date: <2021-12-01 08:06>
 #+description: Design technique with haskell type
-#+filetags: ::haskell::type::design::interface::definition::
+#+filetags: :haskell:type:design:interface:definition:
 
 * What is type design
 When you explore a domain, the first thing you should do is to create a domain vocabularies which can
