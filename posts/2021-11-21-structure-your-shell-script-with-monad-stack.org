@@ -4,6 +4,10 @@
 #+filetags: ::shell script::FP::monad stack::
 
 * Shell Script Full of Effects
-We write a lot of shell scripts during our career as programmer. If you read them with a little
+We write a lot of shell scripts during our career as a programmer. If you read them with a little
 carefulness, you will find that almost every command within the shell script is conducting some
-effect to make some change to outside world.
+effect to read something from outside or make some change to outside world. These scattered effect
+would make reasoning about your script very difficult especially when debug a long script.
+
+You may wonder if there is a better way to structure a script. The answer is yes, there is a better
+way to do this and it is the FP way.

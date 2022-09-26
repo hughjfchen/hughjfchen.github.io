@@ -8,7 +8,7 @@
 <![CDATA[DetachmentSoft]]>
     </description>
     <link>https://hughjfchen.github.io/</link>
-    <lastBuildDate>Sun, 25 Sep 2022 22:45:47 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 26 Sep 2022 08:48:46 +0800</lastBuildDate>
     <item>
       <title>
 <![CDATA[about]]>
@@ -357,16 +357,22 @@
       </title>
       <description>
 <![CDATA[
-        <div id="outline-container-org590925c" class="outline-2">
-            <h2 id="org590925c"><span class=
+        <div id="outline-container-orgf5043ec" class="outline-2">
+            <h2 id="orgf5043ec"><span class=
             "section-number-2">1.</span> Shell Script Full of
             Effects</h2>
             <div class="outline-text-2" id="text-1">
                 <p>We write a lot of shell scripts during our
-                career as programmer. If you read them with a
+                career as a programmer. If you read them with a
                 little carefulness, you will find that almost every
                 command within the shell script is conducting some
-                effect to make some change to outside world.</p>
+                effect to read something from outside or make some
+                change to outside world. These scattered effect
+                would make reasoning about your script very
+                difficult especially when debug a long script.</p>
+                <p>You may wonder if there is a better way to
+                structure a script. The answer is yes, there is a
+                better way to do this and it is the FP way.</p>
             </div>
         </div>
         <div class="taglist">
