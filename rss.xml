@@ -8,7 +8,7 @@
 <![CDATA[DetachmentSoft]]>
     </description>
     <link>https://hughjfchen.github.io/</link>
-    <lastBuildDate>Mon, 26 Sep 2022 09:15:57 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 26 Sep 2022 09:21:03 +0800</lastBuildDate>
     <item>
       <title>
 <![CDATA[about]]>
@@ -20,13 +20,30 @@
         <div class="taglist">
             <a href=
             "https://hughjfchen.github.io/tags.html">Tags</a>:
+            <a href="https://hughjfchen.github.io/tag-.html"></a>
             <a href=
-            "https://hughjfchen.github.io/tag-about::blog.html">about::blog</a>
+            "https://hughjfchen.github.io/tag-blog.html">blog</a>
+            <a href="https://hughjfchen.github.io/tag-.html"></a>
+            <a href=
+            "https://hughjfchen.github.io/tag-about.html">about</a>
+            <a href="https://hughjfchen.github.io/tag-.html"></a>
         </div>
     ]]>
       </description>
       <category>
-<![CDATA[about::blog]]>
+<![CDATA[]]>
+      </category>
+      <category>
+<![CDATA[blog]]>
+      </category>
+      <category>
+<![CDATA[]]>
+      </category>
+      <category>
+<![CDATA[about]]>
+      </category>
+      <category>
+<![CDATA[]]>
       </category>
       <link>https://hughjfchen.github.io/about.html</link>
       <guid>https://hughjfchen.github.io/about.html</guid>
