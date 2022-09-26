@@ -8,7 +8,7 @@
 <![CDATA[DetachmentSoft]]>
     </description>
     <link>https://hughjfchen.github.io/</link>
-    <lastBuildDate>Mon, 26 Sep 2022 09:21:03 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 26 Sep 2022 09:31:46 +0800</lastBuildDate>
     <item>
       <title>
 <![CDATA[about]]>
@@ -55,8 +55,8 @@
       </title>
       <description>
 <![CDATA[
-        <div id="outline-container-org5d26e14" class="outline-2">
-            <h2 id="org5d26e14"><span class=
+        <div id="outline-container-orgd24b393" class="outline-2">
+            <h2 id="orgd24b393"><span class=
             "section-number-2">1.</span> Haskell Typeclass
             Instances</h2>
             <div class="outline-text-2" id="text-1">
@@ -67,9 +67,9 @@
                 Following is some best practice for deriving
                 instances.</p>
             </div>
-            <div id="outline-container-org459e970" class=
+            <div id="outline-container-orga20fab9" class=
             "outline-3">
-                <h3 id="org459e970"><span class=
+                <h3 id="orga20fab9"><span class=
                 "section-number-3">1.1.</span> What to derive</h3>
                 <div class="outline-text-3" id="text-1-1">
                     <p>The first question is what instances to
@@ -86,9 +86,9 @@
                     </ul>
                 </div>
             </div>
-            <div id="outline-container-org02e73d6" class=
+            <div id="outline-container-org4df6f83" class=
             "outline-3">
-                <h3 id="org02e73d6"><span class=
+                <h3 id="org4df6f83"><span class=
                 "section-number-3">1.2.</span> Deriving
                 stratege</h3>
                 <div class="outline-text-3" id="text-1-2">
@@ -130,8 +130,8 @@
       </title>
       <description>
 <![CDATA[
-        <div id="outline-container-org1f868c2" class="outline-2">
-            <h2 id="org1f868c2"><span class=
+        <div id="outline-container-orgc68cbf7" class="outline-2">
+            <h2 id="orgc68cbf7"><span class=
             "section-number-2">1.</span> What is type design</h2>
             <div class="outline-text-2" id="text-1">
                 <p>When you explore a domain, the first thing you
@@ -144,8 +144,8 @@
                 down to the problem path.</p>
             </div>
         </div>
-        <div id="outline-container-org3d0c2a1" class="outline-2">
-            <h2 id="org3d0c2a1"><span class=
+        <div id="outline-container-orgcf26733" class="outline-2">
+            <h2 id="orgcf26733"><span class=
             "section-number-2">2.</span> What is data
             interface</h2>
             <div class="outline-text-2" id="text-2">
@@ -154,8 +154,8 @@
                 implementation detains.</p>
             </div>
         </div>
-        <div id="outline-container-org127d8d5" class="outline-2">
-            <h2 id="org127d8d5"><span class=
+        <div id="outline-container-org3893e1d" class="outline-2">
+            <h2 id="org3893e1d"><span class=
             "section-number-2">3.</span> What is data
             definition</h2>
             <div class="outline-text-2" id="text-3">
@@ -163,8 +163,8 @@
                 you should hide from others.</p>
             </div>
         </div>
-        <div id="outline-container-org27f3df8" class="outline-2">
-            <h2 id="org27f3df8"><span class=
+        <div id="outline-container-orgd0a4443" class="outline-2">
+            <h2 id="orgd0a4443"><span class=
             "section-number-2">4.</span> how to separate the data
             interface from the definition</h2>
             <div class="outline-text-2" id="text-4">
@@ -172,9 +172,9 @@
                 data interface from its real definition with
                 following design technique:</p>
             </div>
-            <div id="outline-container-orgfbcc4e5" class=
+            <div id="outline-container-org3deacea" class=
             "outline-3">
-                <h3 id="orgfbcc4e5"><span class=
+                <h3 id="org3deacea"><span class=
                 "section-number-3">4.1.</span> Data interface</h3>
                 <div class="outline-text-3" id="text-4-1">
                     <p>following create an interface for data</p>
@@ -234,9 +234,9 @@
                     </ul>
                 </div>
             </div>
-            <div id="outline-container-orgcc4eb15" class=
+            <div id="outline-container-org6be4d6d" class=
             "outline-3">
-                <h3 id="orgcc4eb15"><span class=
+                <h3 id="org6be4d6d"><span class=
                 "section-number-3">4.2.</span> Data definition</h3>
                 <div class="outline-text-3" id="text-4-2">
                     <p>By separating the interface, we have great
@@ -369,8 +369,8 @@
       </title>
       <description>
 <![CDATA[
-        <div id="outline-container-orgd29b807" class="outline-2">
-            <h2 id="orgd29b807"><span class=
+        <div id="outline-container-orgf9e2cb4" class="outline-2">
+            <h2 id="orgf9e2cb4"><span class=
             "section-number-2">1.</span> Shell Script Full of
             Effects</h2>
             <div class="outline-text-2" id="text-1">
@@ -437,8 +437,8 @@
       </title>
       <description>
 <![CDATA[
-        <div id="outline-container-org8865a73" class="outline-2">
-            <h2 id="org8865a73"><span class=
+        <div id="outline-container-orgd96e0cd" class="outline-2">
+            <h2 id="orgd96e0cd"><span class=
             "section-number-2">1.</span> Why</h2>
             <div class="outline-text-2" id="text-1">
                 <p>Sometimes you will need some extra tools to
@@ -447,8 +447,8 @@
                 a ghc plugin or a pre processer to build.</p>
             </div>
         </div>
-        <div id="outline-container-orgcb125df" class="outline-2">
-            <h2 id="orgcb125df"><span class=
+        <div id="outline-container-org5cd0b38" class="outline-2">
+            <h2 id="org5cd0b38"><span class=
             "section-number-2">2.</span> Cabal
             build-tool-depends</h2>
             <div class="outline-text-2" id="text-2">
@@ -459,8 +459,8 @@
                 "https://github.com/haskell/cabal/issues/8434">https://github.com/haskell/cabal/issues/8434</a></p>
             </div>
         </div>
-        <div id="outline-container-org4c01ddb" class="outline-2">
-            <h2 id="org4c01ddb"><span class=
+        <div id="outline-container-orga64900d" class="outline-2">
+            <h2 id="orga64900d"><span class=
             "section-number-2">3.</span> haskell.nix
             executableToolDepends</h2>
             <div class="outline-text-2" id="text-3">
@@ -519,16 +519,16 @@
       </title>
       <description>
 <![CDATA[
-        <div id="outline-container-org9d9a018" class="outline-2">
-            <h2 id="org9d9a018"><span class=
+        <div id="outline-container-org8a3abd0" class="outline-2">
+            <h2 id="org8a3abd0"><span class=
             "section-number-2">1.</span> Prelude</h2>
             <div class="outline-text-2" id="text-1">
                 <p>How can we create a new world? By observe the
                 old one?</p>
             </div>
-            <div id="outline-container-orgac4c1c3" class=
+            <div id="outline-container-orgdca2ecd" class=
             "outline-3">
-                <h3 id="orgac4c1c3"><span class=
+                <h3 id="orgdca2ecd"><span class=
                 "section-number-3">1.1.</span> Power source</h3>
                 <div class="outline-text-3" id="text-1-1">
                     <p>Image you’re a master and you have power but
@@ -539,29 +539,29 @@
                     purpose.</p>
                 </div>
             </div>
-            <div id="outline-container-orga041e7a" class=
+            <div id="outline-container-orga6cce3b" class=
             "outline-3">
-                <h3 id="orga041e7a"><span class=
+                <h3 id="orga6cce3b"><span class=
                 "section-number-3">1.2.</span> Do it</h3>
                 <div class="outline-text-3" id="text-1-2">
                     <p>Yes, just do it.</p>
                 </div>
             </div>
         </div>
-        <div id="outline-container-org5e1941b" class="outline-2">
-            <h2 id="org5e1941b"><span class=
+        <div id="outline-container-org27ef561" class="outline-2">
+            <h2 id="org27ef561"><span class=
             "section-number-2">2.</span> Afterware</h2>
         </div>
-        <div id="outline-container-org9072286" class="outline-2">
-            <h2 id="org9072286"><span class=
+        <div id="outline-container-orgdd3e1e5" class="outline-2">
+            <h2 id="orgdd3e1e5"><span class=
             "section-number-2">3.</span> Time</h2>
         </div>
-        <div id="outline-container-orgb9168c4" class="outline-2">
-            <h2 id="orgb9168c4"><span class=
+        <div id="outline-container-org3f9b94f" class="outline-2">
+            <h2 id="org3f9b94f"><span class=
             "section-number-2">4.</span> Space</h2>
         </div>
-        <div id="outline-container-orga2d8aad" class="outline-2">
-            <h2 id="orga2d8aad"><span class=
+        <div id="outline-container-orgc605aa9" class="outline-2">
+            <h2 id="orgc605aa9"><span class=
             "section-number-2">5.</span> 中华民族</h2>
             <div class="outline-text-2" id="text-5">
                 <p>从这一刻开始，中华民族作为一个完整的民族登上了历史舞台。</p>
